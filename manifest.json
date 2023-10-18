@@ -1,0 +1,24 @@
+{
+	"manifest_version": 3, 
+	"name": "Toolbox for FPTU",
+	"description": "Tổng hợp công cụ giúp bạn múa lửa tại FPTU!",
+	"version": "1.0",
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://fu-edunext.fpt.edu.vn/*"],
+			"js": ["./content/edunext.js"]
+		},
+		{
+			"matches": ["https://fap.fpt.edu.vn/Default.aspx"],
+			"js": ["./content/fap.js"],
+			"world": "MAIN"
+		}
+	],
+	"action": {
+		"default_popup": "popup.html"
+	},
+	"permissions": ["tabs"]
+}
