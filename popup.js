@@ -1,9 +1,10 @@
 const btnVote = document.querySelector(".btn-vote");
+const btnCheat = document.querySelector(".btn-cheat");
 
 btnVote.addEventListener("click", vote);
+btnCheat.addEventListener("click", cheat);
 
-function vote() {
-    console.log("Vote");
+function sendMessage(msg) {
     const params = {
         active: true,
         currentWindow: true
@@ -11,6 +12,18 @@ function vote() {
     chrome.tabs.query(params, gotTab)
 
     function gotTab(tab) {
-        chrome.tabs.sendMessage(tab[0].id, { action: "vote"}); 
+        chrome.tabs.sendMessage(tab[0].id, msg)
     }
+}
+
+function vote() {
+    console.log("Vote");
+    sendMessage({ action: "vote"});    
+}
+
+function cheat() {
+    console.log("Cheat");
+    const input = document.querySelector(".pin");
+    const type = document.querySelector("#type").value;
+    sendMessage({ pin: input.value, type: type });
 }

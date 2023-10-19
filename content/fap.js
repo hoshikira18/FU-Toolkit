@@ -1,5 +1,8 @@
 
-if (window.location.href == "https://fap.fpt.edu.vn/Default.aspx") {
+	if(window.location.href == "https://fap.fpt.edu.vn/Thongbao.aspx") {
+		window.location.href = "https://fap.fpt.edu.vn/Student.aspx";
+	}
+
     const selectEl = document.querySelector("#ctl00_mainContent_ddlCampus");
 
 	if (selectEl.selectedIndex !== 1) {
@@ -12,6 +15,5 @@ if (window.location.href == "https://fap.fpt.edu.vn/Default.aspx") {
 		// click button
 		loginBtn.click();
 	}
-}
 
 

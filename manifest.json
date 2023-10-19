@@ -1,6 +1,6 @@
 {
-	"manifest_version": 3, 
-	"name": "Toolbox for FPTU",
+	"manifest_version": 3,
+	"name": "FPTU Toolkit",
 	"description": "Tổng hợp công cụ giúp bạn múa lửa tại FPTU!",
 	"version": "1.0",
 	"background": {
@@ -8,17 +8,48 @@
 	},
 	"content_scripts": [
 		{
-			"matches": ["https://fu-edunext.fpt.edu.vn/*"],
-			"js": ["./content/edunext.js"]
+			"matches": [
+				"https://fu-edunext.fpt.edu.vn/*"
+			],
+			"js": [
+				"./content/edunext.js"
+			]
 		},
 		{
-			"matches": ["https://fap.fpt.edu.vn/Default.aspx"],
-			"js": ["./content/fap.js"],
+			"matches": [
+				"https://fap.fpt.edu.vn/Default.aspx", "https://fap.fpt.edu.vn/*"
+			],
+			"js": [
+				"./content/fap.js"
+			],
 			"world": "MAIN"
+		},
+		{
+			"matches": [
+				"https://quizizz.com/*",
+				"https://cryptohack.blooket.com/*",
+				"https://goldquest.blooket.com/*",
+				"https://fishingfrenzy.blooket.com/*",
+				"https://towerdefense2.blooket.com/*",
+				"https://monsterbrawl.blooket.com/*",
+				"https://deceptivedinos.blooket.com/*",
+				"https://battleroyale.blooket.com/*", 
+				"https://towerdefense.blooket.com/*",
+				"https://cafe.blooket.com/*",
+				"https://factory.blooket.com/*",
+				"https://racing.blooket.com/*",
+				"https://blookrush.blooket.com/*",
+				"https://classic.blooket.com/*"
+			],
+			"js": [
+				"./content/cheat.js"
+			]
 		}
 	],
 	"action": {
 		"default_popup": "popup.html"
 	},
-	"permissions": ["tabs"]
+	"permissions": [
+		"tabs"
+	]
 }
