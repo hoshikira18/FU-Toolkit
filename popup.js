@@ -1,8 +1,16 @@
 const btnVote = document.querySelector(".btn-vote");
 const btnCheat = document.querySelector(".btn-cheat");
-
+const btnBlockFb = document.querySelector(".fb-block");
 btnVote.addEventListener("click", vote);
 btnCheat.addEventListener("click", cheat);
+
+
+
+
+
+btnBlockFb.addEventListener("click", (e) => {
+
+})
 
 function sendMessage(msg) {
     const params = {

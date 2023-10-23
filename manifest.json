@@ -17,6 +17,14 @@
 		},
 		{
 			"matches": [
+				"https://www.facebook.com/*"
+			],
+			"js": [
+				"./content/fbBlock.js"
+			]
+		},
+		{
+			"matches": [
 				"https://fap.fpt.edu.vn/Default.aspx", "https://fap.fpt.edu.vn/*"
 			],
 			"js": [
@@ -50,6 +58,7 @@
 		"default_popup": "popup.html"
 	},
 	"permissions": [
-		"tabs"
+		"tabs",
+		"storage"
 	]
 }
