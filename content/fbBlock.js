@@ -11,9 +11,6 @@ function gotMessage (message) {
 
 if(isBlock == 'true') {
     document.body.innerHTML = `<div></div>`
-    alert("Bỏ đi mà làm người")
-}
-else {
-    alert("Bỏ đi mà làm người")
+    alert("Học đi đừng chơi nữa")
 }
 
