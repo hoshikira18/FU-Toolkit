@@ -17,6 +17,14 @@
 		},
 		{
 			"matches": [
+				"https://fap.fpt.edu.vn/Grade/*"
+			],
+			"js": [
+				"./content/fap_point.js"
+			]
+		},
+		{
+			"matches": [
 				"https://www.facebook.com/", "https://www.facebook.com/*"
 			],
 			"js": [
@@ -28,7 +36,7 @@
 				"https://fap.fpt.edu.vn/Default.aspx", "https://fap.fpt.edu.vn/*"
 			],
 			"js": [
-				"./content/fap.js"
+				"./content/fap_login.js"
 			],
 			"world": "MAIN"
 		},
