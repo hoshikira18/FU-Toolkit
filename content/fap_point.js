@@ -36,3 +36,6 @@ const table = document.querySelectorAll("table")
             }
         })
 
+
+
+		

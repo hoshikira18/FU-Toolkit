@@ -165,3 +165,17 @@
     border-top: solid 2px #000;
 }
 
+.success, .fail {
+  padding: 5px 0;
+  font-weight: bold;
+  font-size: 16px;
+  display: none;
+}
+.success {
+  color: #0fa958;
+}
+.fail {
+  color: red;
+}
+
+
