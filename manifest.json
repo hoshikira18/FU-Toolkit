@@ -3,6 +3,9 @@
 	"name": "FPTU Toolkit",
 	"description": "Tổng hợp công cụ giúp bạn múa lửa tại FPTU!",
 	"version": "1.0",
+	"chrome_url_overrides": {
+		"newtab": "newtab.html"
+	  },
 	"background": {
 		"service_worker": "background.js"
 	},
@@ -39,6 +42,14 @@
 				"./content/fap_login.js"
 			],
 			"world": "MAIN"
+		},
+		{
+			"matches": [
+				"https://fap.fpt.edu.vn/Report/ScheduleOfWeek.aspx"
+			],
+			"js": [
+				"./content/fap_schedule.js"
+			]
 		},
 		{
 			"matches": [

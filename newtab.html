@@ -1,0 +1,91 @@
+<!-- newtab.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('/bg-image.avif');
+      background-repeat: repeat;
+      background-size: 500px;
+    }
+
+    tbody > tr > td > p {
+      padding: 0 5px;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+      color: black;
+      background-color: white;
+    }
+
+    thead {
+      background-color: black;
+    }
+
+    table {
+      padding: 5px;
+      border: 2px solid black;
+    }
+
+    .self {
+      padding: 5px 10px;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background-color: black;
+      color: white;
+      font-family:Arial, Helvetica, sans-serif;
+      font-size: 16px;
+    }
+
+    .self > a {
+      text-decoration: none;
+      color:aquamarine;
+    }
+
+    .note {
+      font-family:Arial, Helvetica, sans-serif;
+      background-color: white;
+      padding: 0 10px;
+      border: solid black 1px;
+      margin-left: 20px;
+    }
+
+    .note > h1 {
+      background-color: black;
+      color: white;
+      text-align: center;
+    }
+
+  </style>
+  <title>New Tab</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="calender"></div>
+    <div class="note">
+      <h1>Note</h1>
+      <textarea name="" id="input" cols="30" rows="10"></textarea>
+    </div>
+    
+  </div>
+  <div class="self">
+    Tool by <a href="https://www.facebook.com/hoshikira18">Hoshikira</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
