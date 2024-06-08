@@ -1,7 +1,7 @@
-const data = document.querySelectorAll("table")[2].outerHTML
+const data = document.querySelectorAll(".app-page")[0].outerHTML;
 
-console.log(data)
+console.log(data);
 
-chrome.storage.local.set({ 'calenderTable': data }, () => {
-    console.log("Đã lấy được data!")
-})
+chrome.storage.local.set({ calenderTable: data }, () => {
+  console.log("Đã lấy được data!");
+});

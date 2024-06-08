@@ -5,11 +5,19 @@
 	"version": "1.0",
 	"chrome_url_overrides": {
 		"newtab": "newtab.html"
-	  },
+	},
 	"background": {
 		"service_worker": "background.js"
 	},
 	"content_scripts": [
+		{
+			"matches": [
+				"https://www.coursera.org/learn/*/**"
+			],
+			"js": [
+				"./content/coursera.js"
+			]
+		},
 		{
 			"matches": [
 				"https://fu-edunext.fpt.edu.vn/*"
@@ -28,7 +36,8 @@
 		},
 		{
 			"matches": [
-				"https://www.facebook.com/", "https://www.facebook.com/*"
+				"https://www.facebook.com/",
+				"https://www.facebook.com/*"
 			],
 			"js": [
 				"./content/fbBlock.js"
@@ -36,7 +45,8 @@
 		},
 		{
 			"matches": [
-				"https://fap.fpt.edu.vn/Default.aspx", "https://fap.fpt.edu.vn/*"
+				"https://fap.fpt.edu.vn/Default.aspx",
+				"https://fap.fpt.edu.vn/*"
 			],
 			"js": [
 				"./content/fap_login.js"
@@ -53,6 +63,15 @@
 		},
 		{
 			"matches": [
+				"https://docs.google.com/forms/d/e/1FAIpQLSdnJ5qa_riFgYwwuyPGyeGdAzvJkOPW3us_RSvFCx5qLXeq_A/*"
+			],
+			"world": "MAIN",
+			"js": [
+				"./content/spam.js"
+			]
+		},
+		{
+			"matches": [
 				"https://quizizz.com/*",
 				"https://cryptohack.blooket.com/*",
 				"https://goldquest.blooket.com/*",
@@ -60,7 +79,7 @@
 				"https://towerdefense2.blooket.com/*",
 				"https://monsterbrawl.blooket.com/*",
 				"https://deceptivedinos.blooket.com/*",
-				"https://battleroyale.blooket.com/*", 
+				"https://battleroyale.blooket.com/*",
 				"https://towerdefense.blooket.com/*",
 				"https://cafe.blooket.com/*",
 				"https://factory.blooket.com/*",
@@ -82,7 +101,7 @@
 		"32": "./icons/icon.png",
 		"48": "./icons/icon.png",
 		"128": "./icons/icon.png"
-	  },
+	},
 	"permissions": [
 		"tabs",
 		"storage"
