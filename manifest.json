@@ -3,9 +3,6 @@
 	"name": "FPTU Toolkit",
 	"description": "Tổng hợp công cụ giúp bạn múa lửa tại FPTU!",
 	"version": "1.0",
-	"chrome_url_overrides": {
-		"newtab": "newtab.html"
-	},
 	"background": {
 		"service_worker": "background.js"
 	},
